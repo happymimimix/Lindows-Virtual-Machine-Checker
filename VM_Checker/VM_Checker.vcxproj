@@ -50,7 +50,16 @@
     <ClInclude Include="Trace.h" />
   </ItemGroup>
   <ItemGroup>
-    <Inf Include="VM_Checker.inf" />
+    <Inf Include="VM_Checker.inf">
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">1.01</TimeStamp>
+      <TimeStamp Condition="'$(Configuration)|$(Platform)'=='Release|x64'">1.01</TimeStamp>
+    </Inf>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8E2EEDCC-AF39-4FCE-85BA-1E874BBB9E55}</ProjectGuid>

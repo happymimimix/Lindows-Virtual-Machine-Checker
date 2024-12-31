@@ -5,10 +5,10 @@
 [Version]
 Signature="$WINDOWS NT$"
 Class=Lindows_VM_Checker ; TODO: edit Class
-ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+ClassGuid={4D36E96F-E329-11CE-BFC1-08002BE10318} ; TODO: edit ClassGuid
 Provider=%ManufacturerName%
 CatalogFile=VM_Checker.cat
-DriverVer = 12/31/2024,15.43.30.111
+DriverVer = 12/31/2024,1.01.0.0
 
 [DestinationDirs]
 DefaultDestDir = 12
@@ -55,7 +55,7 @@ AddService = VM_Checker,%SPSVCINST_ASSOCSERVICE%, VM_Checker_Service_Inst
 [VM_Checker_Service_Inst]
 DisplayName    = %VM_Checker.SVCDESC%
 ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
-StartType      = 3               ; SERVICE_DEMAND_START
+StartType      = 0               ; SERVICE_DEMAND_START
 ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
 ServiceBinary  = %12%\VM_Checker.sys
 
@@ -70,6 +70,10 @@ CopyFiles=VM_Checker_Device_CoInstaller_CopyFiles
 [VM_Checker_Device_CoInstaller_AddReg]
 ;
 
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\{4D36E96F-E329-11CE-BFC1-08002BE10318}",,0x00000000,"Lindows_VM_Checker"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\{4D36E96F-E329-11CE-BFC1-08002BE10318}",,0x00000000,"Lindows_VM_Checker"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\VM_Checker",,0x00000000,"Driver"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\VM_Checker",,0x00000000,"Driver"
 
 [VM_Checker_Device_CoInstaller_CopyFiles]
 ;
